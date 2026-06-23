@@ -1,0 +1,15 @@
+{
+  "name": "double-click-to-like",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal MV3 extension: double-click a short-form video to like it.",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "jsdom": "^25.0.1",
+    "vitest": "^2.1.8"
+  }
+}

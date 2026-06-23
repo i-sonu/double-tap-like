@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Double Tap Like",
+  "version": "0.2.0",
+  "description": "Double-click a short-form video to like it (YouTube Shorts, Instagram Reels, TikTok, X). Personal sideloaded tool.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://www.youtube.com/*",
+    "https://www.instagram.com/*",
+    "https://www.tiktok.com/*"
+  ],
+  "icons": {
+    "128": "icons/icon.png"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Double-Click to Like",
+    "default_icon": {
+      "128": "icons/icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://www.youtube.com/*",
+        "https://www.instagram.com/*",
+        "https://www.tiktok.com/*"
+      ],
+      "js": [
+        "src/config.js",
+        "src/content/adapters/base.js",
+        "src/content/adapters/twitter.js",
+        "src/content/adapters/youtube.js",
+        "src/content/adapters/tiktok.js",
+        "src/content/adapters/instagram.js",
+        "src/content/detect.js",
+        "src/content/heart.js",
+        "src/content/dblclick.js",
+        "src/content/main.js"
+      ],
+      "css": ["src/styles/heart.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Double-Click to Like</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="dcl-header">
+      <h1>Double-Click to Like</h1>
+    </header>
+
+    <ul class="dcl-list">
+      <li class="dcl-row dcl-row--master">
+        <label for="toggle-master">Enabled (master)</label>
+        <label class="dcl-switch">
+          <input type="checkbox" id="toggle-master" data-platform="master" />
+          <span class="dcl-slider" aria-hidden="true"></span>
+        </label>
+      </li>
+
+      <li class="dcl-divider" role="separator"></li>
+
+      <li class="dcl-row">
+        <label for="toggle-twitter">X / Twitter</label>
+        <label class="dcl-switch">
+          <input type="checkbox" id="toggle-twitter" data-platform="twitter" />
+          <span class="dcl-slider" aria-hidden="true"></span>
+        </label>
+      </li>
+      <li class="dcl-row">
+        <label for="toggle-youtube">YouTube</label>
+        <label class="dcl-switch">
+          <input type="checkbox" id="toggle-youtube" data-platform="youtube" />
+          <span class="dcl-slider" aria-hidden="true"></span>
+        </label>
+      </li>
+      <li class="dcl-row">
+        <label for="toggle-tiktok">TikTok</label>
+        <label class="dcl-switch">
+          <input type="checkbox" id="toggle-tiktok" data-platform="tiktok" />
+          <span class="dcl-slider" aria-hidden="true"></span>
+        </label>
+      </li>
+      <li class="dcl-row">
+        <label for="toggle-instagram">Instagram</label>
+        <label class="dcl-switch">
+          <input type="checkbox" id="toggle-instagram" data-platform="instagram" />
+          <span class="dcl-slider" aria-hidden="true"></span>
+        </label>
+      </li>
+    </ul>
+
+    <p class="dcl-note">Off platforms keep their native behavior untouched.</p>
+
+    <!-- config.js first (no module syntax), then the UI script. -->
+    <script src="../config.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
