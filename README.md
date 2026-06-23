@@ -1,5 +1,3 @@
-<img width="1280" height="800" alt="2" src="https://github.com/user-attachments/assets/d7617640-8bef-483a-b9c8-cb7265dd350c" /><img width="1280" height="800" alt="4" src="https://github.com/user-attachments/assets/6756996d-f0f2-4e88-91d0-e1c0fab0b6b7" /># Double Tap Like
-
 A personal, sideloaded **Manifest V3** browser extension. Double-click the video
 surface of a short-form video to **like** it — bringing the mobile "double-tap to
 like" gesture to desktop web.
@@ -106,8 +104,6 @@ no network calls. One deliberate double-click = at most one like.
 
 ## Screenshots
 <img width="1280" height="800" alt="1" src="https://github.com/user-attachments/assets/11b077ef-4a11-4360-9862-1afbc9157033" /><img width="1280" height="800" alt="4" src="https://github.com/user-attachments/assets/055f931d-ee20-4c10-a455-16c9d9218b96" />
-<img width="1280" height="800" alt="3" src="https://github.com/user-attachments/assets/318181a7-a135-49bc-9557-1467571da81c" />
-
 <img width="1280" height="800" alt="2" src="https://github.com/user-attachments/assets/f3947f6b-88ef-418a-a4b2-eb74f0776321" />
 <img width="1280" height="800" alt="3" src="https://github.com/user-attachments/assets/af9fb6aa-c72c-49b4-b8e6-920f568ca5ea" />
 <img width="1280" height="800" alt="4" src="https://github.com/user-attachments/assets/e08aaaae-a00e-403e-a2ff-d2a48129d298" />
