@@ -1,3 +1,5 @@
+# Double Tap Like
+
 A personal, sideloaded **Manifest V3** browser extension. Double-click the video
 surface of a short-form video to **like** it — bringing the mobile "double-tap to
 like" gesture to desktop web.
