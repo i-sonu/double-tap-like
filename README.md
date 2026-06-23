@@ -38,7 +38,7 @@ The toolbar popup has a **master** switch plus one switch per platform
 there immediately (no reload) and leaves native behavior untouched. State persists
 via `chrome.storage.sync`.
 
-## How it works (short version)
+## How it works
 
 - One delegated **capture-phase `click` listener** on `document` — survives SPA
   navigation/scroll, no per-element binding.
@@ -57,38 +57,6 @@ out of the way for photos (clicking Like ourselves would toggle the native like 
 off). The reels heart animation is styled to match Instagram's native white double-tap heart.
 
 ---
-
-## Manual QA checklist (you must run these — see limitations below)
-
-The extension can't be auto-tested against live, logged-in sites. Run these by hand:
-
-- [ ] **Load unpacked** (above); popup opens with master + 4 platform switches.
-- [ ] **X — video**: double-click a video post → heart animation, like registers; single-click still plays/pauses.
-- [ ] **X — image**: double-click an image post → like registers (the photo viewer also opens — that's native).
-- [ ] **X — already-liked**: double-click a liked post → does NOT un-like.
-- [ ] **X — controls**: double-clicking reply/retweet/like/scrubber is ignored (not hijacked).
-- [ ] **YouTube Shorts**: double-click center of a Short → like fills, count increments, **NO fullscreen**. Re-double-click → no un-like.
-- [ ] **TikTok**: double-click a feed video → heart fills; already-liked → no toggle off; no jarring pause/play.
-- [ ] **Instagram — reel/video**: double-click → like registers + white heart animation.
-- [ ] **Instagram — photo**: double-click → native like still works; extension doesn't double-fire/un-like.
-- [ ] **Toggles**: turn a platform OFF → liking stops immediately (no reload); master OFF → all off; reopen popup → state persisted.
-- [ ] **SPA survival**: scroll through 10+ new videos and repeat — confirms the delegated listener keeps working.
-
-## What was and wasn't tested
-
-**Auto-tested** (vitest + jsdom, 58 tests): double-click timing/debounce/proximity
-logic, "already-liked ⇒ no-op", "click-on-control ⇒ ignored", per-platform toggle
-gating (master + platform), heart render/cleanup + variants, and each adapter's
-`resolveSurface` / `findLikeButton` / `isLiked` against **synthetic DOM matching the
-documented selector contract**.
-
-**NOT auto-tested / only you can confirm:**
-
-- That the selectors still match the **live** sites (only the X image/video case has
-  been verified live so far; YouTube, TikTok, and Instagram selectors are best-effort
-  and need the manual checks above).
-- That a like actually **persisted server-side**.
-- The real popup ↔ `chrome.storage` round-trip in Chrome.
 
 ## If a platform stops working
 
